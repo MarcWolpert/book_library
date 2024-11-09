@@ -5,27 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" rel="noopener noreferrer">
     <title>Book Library</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="book.js" defer></script>
 </head>
 <body>
     <div class="bookRibbon">
-        <p id="bookCount" class="bookStats">Book Count: 0</p>
-        <p id="authorCount" class="bookStats">Author Count: 0</p>
+        <!-- <p id="bookCount" class="bookStats">Book Count: 0</p>
+        <p id="authorCount" class="bookStats">Author Count: 0</p> -->
         <button class="addBook" class="bookStats">Add Book</button>
-        <p id="bookCount" class="bookStats">Pages Read: 0</p>
-        <p id="authorCount" class="bookStats">Unread Books: 0/0</p>
+        <!-- <p id="bookCount" class="bookStats">Pages Read: 0</p>
+        <p id="authorCount" class="bookStats">Unread Books: 0/0</p> -->
     </div>
     <div class="bookList">
-        <div class="card">
-            <p class="book cardAttributes">Book: Lord of the Rings</p>
-            <p class="author cardAttributes">Author: Tolkien</p>
-            <p class="pages cardAttributes">Pages Count: 122/365</p>
-            <p class="isRead cardAttributes">Read Before: Yes</p>
-            <button class="changeReadStatus">Change Read Status</button>
-            <button class="removeBook">Remove Book</button>
-        </div>
     </div>
-    <dialog open>
-        <form style="background-color:white" action="/nowhere" method="dialog" class="card newBook">
+    <dialog id="modal" >
+        <form style="background-color:white" action="/nowhere" method="dialog" class="card newBook" id="submitNewBook">
             <h2>New Book</h2>
             <label for="bookName">Book name</label>
             <input type="text" name="bookName" id="bookInput" placeholder="Lord of The Rings">
