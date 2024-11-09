@@ -1,2 +1,2 @@
-# book_library
-Creating a basic book library with html, css, and javascript.
+# Book Library
+A basic book library with html, css, and javascript.
