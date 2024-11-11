@@ -16,13 +16,24 @@ const myLibrary=[
         ["Ulysses", "James Joyce", 50, 730, false]
 ];
 let id=0;
-function Book(name, author, pages,totalPages, isRead){
-    this.name=name;
-    this.author=author;
-    this.pages=pages;
-    this.totalPages=totalPages;
-    this.isRead= (isRead? "Yes": "No")
-}
+// function Book(name, author, pages,totalPages, isRead){
+//     this.name=name;
+//     this.author=author;
+//     this.pages=pages;
+//     this.totalPages=totalPages;
+//     this.isRead= (isRead? "Yes": "No");
+// }
+class Book{
+    constructor(name,author,pages,totalPages,isRead){
+        this.name=name;
+        this.author=author;
+        this.pages=pages;
+        this.totalPages=totalPages;
+        this.isRead= (isRead? "Yes": "No");
+    };
+
+};
+
 
 function addBookToLibrary(book){
     const cardDiv=document.createElement("div");
@@ -96,6 +107,7 @@ for (let i=0; i<myLibrary.length; i++){
 // for (let i=0; i<3; i++){
     const b=myLibrary[i]
     const book1=new Book(b[0],b[1],b[2],b[3],b[4]);
+    console.log(book1);
     addBookToLibrary(book1);
 }
 
@@ -114,10 +126,6 @@ modal.addEventListener("click",(event)=>{
         modal.close();
     }
 })
-
-
-
-
 
 const newBookForm = document.querySelector("#submitNewBook");
 
