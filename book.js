@@ -143,10 +143,6 @@ modal.showModal();
 const form = document.getElementById('newBookForm');
 const inputs = form.getElementsByTagName('input');
 
-const object = {
-	input: 'hello',
-	output: 'world',
-};
 function formConstraints(inputs) {
 	for (const input of inputs) {
 		const type = input.type;

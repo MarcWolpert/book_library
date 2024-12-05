@@ -1,0 +1,54 @@
+body {
+	font-family:
+		system-ui,
+		-apple-system,
+		BlinkMacSystemFont,
+		'Segoe UI',
+		Roboto,
+		Oxygen,
+		Ubuntu,
+		Cantarell,
+		'Open Sans',
+		'Helvetica Neue',
+		sans-serif;
+	font-size: 1rem;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	--country-width: 58ch;
+	--width: calc(var(--country-width)+16);
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	gap: 16px;
+	width: var(--width);
+	border-radius: 1rem;
+	border: 0.25rem solid black;
+	padding: 1rem;
+	input[type='submit'] {
+		width: calc(var(--width) / 3);
+	}
+	input {
+		width: var(--country-width);
+	}
+	select {
+		text-align: center;
+	}
+	select:valid,
+	input:valid {
+		border: 2px solid green;
+	}
+	select:invalid,
+	input:invalid {
+		border: 2px solid rgb(255, 0, 0, 0.7);
+	}
+	select:invalid select:focus,
+	input:invalid input:focus {
+		border: 2px solid red;
+	}
+}
