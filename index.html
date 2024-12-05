@@ -1,82 +1,84 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-      rel="noopener noreferrer"
-    />
-    <title>Book Library</title>
-    <link rel="stylesheet" href="styles.css" />
-    <script src="book.js" defer></script>
-  </head>
-  <body>
-    <div class="bookRibbon">
-      <!-- <p id="bookCount" class="bookStats">Book Count: 0</p>
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+			rel="noopener noreferrer" />
+		<title>Book Library</title>
+		<link
+			rel="stylesheet"
+			href="styles.css" />
+		<script
+			src="book.js"
+			defer></script>
+	</head>
+	<body>
+		<div class="bookRibbon">
+			<!-- <p id="bookCount" class="bookStats">Book Count: 0</p>
         <p id="authorCount" class="bookStats">Author Count: 0</p> -->
-      <button class="addBook" class="bookStats">Add Book</button>
-    </div>
-    <div class="bookList"></div>
-    <dialog id="modal" show>
-      <form
-        style="background-color: white"
-        action="/nowhere"
-        method="dialog"
-        class="card newBook"
-        id="submitNewBook"
-      >
-        <h2>New Book</h2>
-        <label for="bookName">Book name</label>
-        <input
-          type="text"
-          name="bookName"
-          id="bookInput"
-          placeholder="Lord of The Rings"
-          minlength="0"
-          maxlength="32"
-          required
-        />
-        <br />
-        <label for="authorName">Author: </label>
-        <input
-          type="text"
-          name="authorName"
-          id="authorInput"
-          placeholder="JRR Tolkien"
-          minlength="0"
-          maxlength="32"
-          required
-        />
-        <br />
-        <label for="pagesCount">Total Page Count: </label>
-        <input
-          type="number"
-          name="pagesCount"
-          id="pagesInput"
-          placeholder="52"
-          min="0"
-          max="10000"
-          required
-        />
-        <br />
-        <label for="pagesTotalRead">Pages Read:</label>
-        <input
-          type="number"
-          name="pagesTotalRead"
-          id="pagesRead"
-          placeholder="380"
-          min="0"
-          max="10000"
-          required
-        />
-        <br />
-        <div>
-          <label for="readBefore" id="readInputText">Read Before: </label>
-          <input type="checkbox" name="readBefore" id="readInput" required />
-        </div>
-        <input type="submit" value="Add Book" id="submitNewBook" />
-      </form>
-    </dialog>
-  </body>
+			<button
+				class="addBook"
+				class="bookStats">
+				Add Book
+			</button>
+		</div>
+		<div class="bookList"></div>
+		<dialog
+			id="modal"
+			show>
+			<form
+				style="background-color: white"
+				action="/nowhere"
+				method="dialog"
+				class="card newBook"
+				id="newBookForm">
+				<h2>New Book</h2>
+				<label for="bookName">Book name</label>
+				<input
+					type="text"
+					name="bookName"
+					id="bookInput"
+					placeholder="Lord of The Rings" />
+				<br />
+				<label for="authorName">Author: </label>
+				<input
+					type="text"
+					name="authorName"
+					id="authorInput"
+					placeholder="JRR Tolkien" />
+				<br />
+				<label for="pagesCount">Total Page Count: </label>
+				<input
+					type="number"
+					name="pagesCount"
+					id="pagesInput"
+					placeholder="52" />
+				<br />
+				<label for="pagesTotalRead">Pages Read:</label>
+				<input
+					type="number"
+					name="pagesTotalRead"
+					id="pagesRead"
+					placeholder="380" />
+				<br />
+				<div>
+					<label
+						for="readBefore"
+						id="readInputText"
+						>Read Before:
+					</label>
+					<input
+						type="checkbox"
+						name="readBefore"
+						id="readInput" />
+				</div>
+				<input
+					type="submit"
+					value="Add Book"
+					id="submitNewBook" />
+			</form>
+		</dialog>
+	</body>
 </html>
